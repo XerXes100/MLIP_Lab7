@@ -24,7 +24,7 @@ def data_preprocessing()-> tuple[np.ndarray]:
         X, y, test_size=0.2, random_state=42
     )
 
-    return X_train, X_test, y_train, y_test
+    return X_train, X_test, y_train, y_test # type: ignore
 
 def train_logistic_regression(
     X_train:np.ndarray, 
@@ -88,6 +88,6 @@ def evaluation(
     # Calculate metrics
     accuracy = accuracy_score(y_test, y_pred)
 
-    return accuracy
+    return accuracy # type: ignore
 
     
